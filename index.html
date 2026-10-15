@@ -1,0 +1,1401 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Nazy Massoud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --oat:#E3DCCF;
+  --oat-deep:#D6CDBC;
+  --paper:#F7F4EF;
+  --cream:#FBF9F5;
+  --blush:#EDE6E0;
+  --ink:#16150F;
+  --ink-soft:#4A473E;
+  --ink-mute:#807C71;
+  --rust:#A65E38;
+  --slate:#8E8E87;
+  --line:rgba(22,21,15,.14);
+
+  --display:'Bodoni Moda',Georgia,'Times New Roman',serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+
+  --gutter:clamp(1rem,2.4vw,2rem);
+  --band:clamp(4.5rem,11vw,9.5rem);
+  --maxw:1440px;
+  --edge-l:clamp(1.25rem,5vw,5rem);
+
+}
+:root:not([data-theme="light"]){ color-scheme:light; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#F7F4EF; --ink:#16150F;
+  }
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:300;
+  font-size:clamp(1.05rem,.5vw + .95rem,1.18rem);
+  line-height:1.75;
+  letter-spacing:.012em;
+  overflow-x:hidden;
+}
+img,svg,video{max-width:100%;height:auto;display:block;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+
+/* ---------- primitives ---------- */
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter);}
+.wrap-narrow{width:100%;max-width:820px;margin-inline:auto;padding-inline:var(--gutter);}
+.sec{padding-block:var(--band);}
+
+.eyebrow{
+  font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:400;color:var(--ink-mute);margin:0 0 1.6rem;
+  margin-inline:auto;
+}
+.eyebrow.on-dark{color:rgba(255,255,255,.72);}
+@media (min-width:680px){.eyebrow--wide{white-space:nowrap;letter-spacing:.18em;}}
+
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;}
+.d1{
+  font-size:clamp(2.45rem,10.5vw,5.6rem);
+  line-height:.98;letter-spacing:.005em;text-transform:uppercase;
+}
+.d2{font-size:clamp(1.95rem,5.4vw,3.35rem);line-height:1.12;}
+.d3{font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.2;}
+.d4{font-size:clamp(1.18rem,2vw,1.42rem);line-height:1.28;}
+.serif-lede{font-family:var(--display);font-size:clamp(1.35rem,3.4vw,2.35rem);line-height:1.32;}
+
+p{margin:0 0 1.15em;max-width:62ch;}
+p:last-child{margin-bottom:0;}
+.center{text-align:center;}
+.center p{margin-inline:auto;}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;text-align:center;
+  white-space:normal;line-height:1.35;text-decoration:none;cursor:pointer;
+  font-family:var(--sans);font-size:.82rem;font-weight:400;
+  letter-spacing:.2em;text-transform:uppercase;
+  min-height:52px;padding:1rem 2rem;width:100%;
+  border-radius:999px;border:1px solid var(--ink);
+  background:var(--ink);color:var(--paper);
+  transition:background .25s ease,color .25s ease,border-color .25s ease;
+}
+.btn:hover{background:transparent;color:var(--ink);}
+.btn--ghost{background:transparent;color:var(--ink);}
+.btn--ghost:hover{background:var(--ink);color:var(--paper);}
+.btn--light{background:transparent;color:#fff;border-color:rgba(255,255,255,.7);}
+.btn--light:hover{background:#fff;color:var(--ink);}
+.btn--solid-light{background:#fff;color:var(--ink);border-color:#fff;}
+.btn--solid-light:hover{background:transparent;color:#fff;border-color:rgba(255,255,255,.7);}
+.btn--square{border-radius:0;padding:1.05rem 2.2rem;}
+@media (min-width:640px){ .btn{width:auto;} }
+
+.btn-row{display:flex;flex-direction:column;gap:.85rem;margin-top:2.4rem;}
+@media (min-width:640px){.btn-row{flex-direction:row;flex-wrap:wrap;gap:1rem;}}
+.btn-row.center-row{align-items:center;}
+@media (min-width:640px){.btn-row.center-row{justify-content:center;}}
+
+/* tonal photo fields (swap for photography) */
+.field{position:relative;overflow:hidden;background:
+  linear-gradient(200deg,#A9A69C 0%,#8E8E87 38%,#6E7069 72%,#565851 100%);}
+.field--warm{background:linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);}
+.field--pale{background:linear-gradient(200deg,#F1ECE4 0%,#DFD7CB 60%,#C9C0B2 100%);}
+.field--dusk{background:linear-gradient(185deg,#8F8F88 0%,#6B6D67 45%,#3F4240 100%);}
+.field::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* photography: image layer over the tonal gradient, which remains as fallback */
+.ph-hero{background:url("https://cdn.katalyst-crm.com/a/870a9af2-6c78-c511-8ade-a4f682a59ea3") center 30%/cover no-repeat,linear-gradient(185deg,#8F8F88 0%,#6B6D67 45%,#3F4240 100%);}
+.ph-stats{background:url("https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260929_083721_47c20539-f6f3-4500-9045-cf5ddd51c2a2.png") center/cover no-repeat,linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);}
+.ph-why{background:url("https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260929_083720_3a92526a-8a3f-4e69-ae5d-711a8f8dd0a1.png") center/cover no-repeat,linear-gradient(200deg,#F1ECE4 0%,#DFD7CB 60%,#C9C0B2 100%);}
+.ph-vip{background:url("https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260929_083721_4acf60ac-365a-4d59-afb0-8296d060e06e.png") center/cover no-repeat,linear-gradient(200deg,#F1ECE4 0%,#DFD7CB 60%,#C9C0B2 100%);}
+.ph-accel{background:url("https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260929_083720_887209f8-0a0c-449f-a8db-5ccaf1f02957.png") center/cover no-repeat,linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);}
+.ph-about{background:url("https://cdn.katalyst-crm.com/a/506edc7f-2e4a-c31b-0f37-87bbe2f1e72b") center 25%/cover no-repeat,linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);}
+.ph-dunes{background:url("https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260929_083720_4a37d3ff-62d3-43c7-a34b-aa7f54ee17f4.png") center/cover no-repeat,linear-gradient(200deg,#F1ECE4 0%,#DFD7CB 60%,#C9C0B2 100%);}
+.ph-close{background:url("https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260929_083720_266b061a-b664-407c-aecb-a6c44a865475.png") center/cover no-repeat,linear-gradient(185deg,#8F8F88 0%,#6B6D67 45%,#3F4240 100%);}
+
+/* ---------- nav ---------- */
+.topbar{background:transparent;position:absolute;top:0;left:0;right:0;z-index:60;color:#fff;}
+.topbar__inner{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding-block:clamp(1rem,2.2vw,1.5rem);
+  max-width:none;padding-left:var(--edge-l);padding-right:var(--gutter);
+}
+.wordmark{
+  font-family:var(--display);font-weight:400;text-decoration:none;
+  font-size:clamp(1.02rem,3.4vw,1.75rem);
+  letter-spacing:.08em;text-transform:uppercase;line-height:1;white-space:nowrap;color:#fff;
+}
+.wordmark__img{height:clamp(90px,10vw,126px);width:auto;display:block;}
+.topbar .menu-btn{color:#fff;}
+.topbar .menu-btn__bars i{background:#fff;}
+.topbar .nav-cta{color:#fff;border-color:rgba(255,255,255,.65);}
+.topbar .nav-cta:hover{background:#fff;color:var(--ink);}
+.topbar__right{display:flex;align-items:center;gap:clamp(.9rem,2.5vw,1.9rem);}
+.menu-btn{
+  background:none;border:0;padding:.6rem .2rem;cursor:pointer;
+  display:flex;align-items:center;gap:.6rem;min-height:44px;
+  font-family:var(--sans);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);
+}
+.menu-btn__bars{display:block;width:22px;height:10px;position:relative;}
+.menu-btn__bars i{position:absolute;left:0;width:100%;height:1px;background:var(--ink);transition:transform .3s ease,opacity .2s ease;}
+.menu-btn__bars i:first-child{top:0;}
+.menu-btn__bars i:last-child{bottom:0;}
+.menu-btn.is-open .menu-btn__bars i:first-child{transform:translateY(4.5px) rotate(45deg);}
+.menu-btn.is-open .menu-btn__bars i:last-child{transform:translateY(-4.5px) rotate(-45deg);}
+.menu-btn__label{display:none;}
+@media (min-width:480px){.menu-btn__label{display:inline;}}
+.nav-cta{
+  display:inline-flex;align-items:center;justify-content:center;text-align:center;
+  min-height:44px;padding:.75rem 1.45rem;border:1px solid var(--ink);border-radius:999px;
+  font-size:.74rem;letter-spacing:.17em;text-transform:uppercase;text-decoration:none;
+  line-height:1.3;white-space:normal;transition:background .25s ease,color .25s ease;
+}
+.nav-cta:hover{background:var(--ink);color:var(--oat);}
+.nav-cta__short{display:inline;}
+.nav-cta__long{display:none;}
+@media (min-width:1024px){.nav-cta__short{display:none;}.nav-cta__long{display:inline;}}
+
+.overlay{
+  position:fixed;inset:0;z-index:70;background:var(--oat);
+  padding:calc(env(safe-area-inset-top,0px) + 5.5rem) var(--gutter) calc(env(safe-area-inset-bottom,0px) + 2.5rem);
+  overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s;
+}
+.overlay.open{opacity:1;visibility:visible;}
+.overlay__close{
+  position:absolute;top:calc(env(safe-area-inset-top,0px) + 1.15rem);right:var(--gutter);
+  background:none;border:0;cursor:pointer;min-height:44px;min-width:44px;
+  font-family:var(--sans);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);
+}
+.overlay__links{list-style:none;margin:0 0 2.5rem;padding:0;}
+.overlay__links a{
+  display:block;text-decoration:none;font-family:var(--display);
+  font-size:clamp(1.55rem,6.5vw,2.4rem);line-height:1.25;padding:.32rem 0;
+  border-bottom:1px solid rgba(22,21,15,.1);
+}
+.overlay__links li:last-child a{border-bottom:0;}
+.overlay__meta{font-size:.9rem;letter-spacing:.06em;color:var(--ink-soft);margin-top:2.5rem;}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;isolation:isolate;
+  min-height:100svh;
+  display:flex;align-items:center;justify-content:flex-start;
+  padding-block:clamp(6rem,14vh,9rem);
+  text-align:left;color:#fff;
+}
+.hero__bg{position:absolute;inset:0;z-index:-2;}
+.hero__veil{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(90deg,rgba(16,18,17,.72) 0%,rgba(18,20,18,.5) 42%,rgba(20,22,20,.18) 72%,rgba(20,22,20,.08) 100%),
+    linear-gradient(180deg,rgba(28,30,28,.35) 0%,rgba(28,30,28,.08) 35%,rgba(22,24,22,.5) 100%);
+}
+.hero__inner{width:100%;max-width:none;margin-inline:0;padding-left:var(--edge-l);padding-right:var(--gutter);}
+.hero .eyebrow{color:rgba(255,255,255,.8);margin:0 0 1.5rem;}
+.hero h1{color:#fff;text-shadow:0 1px 40px rgba(0,0,0,.2);}
+@media (min-width:1200px){.hero h1{white-space:nowrap;}}
+.hero__sub{
+  font-family:var(--sans);font-style:normal;font-weight:300;
+  font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:1.7;letter-spacing:.012em;
+  color:rgba(255,255,255,.92);margin:1.9rem 0 0;max-width:48ch;
+}
+.hero .btn-row{justify-content:flex-start;}
+@media (min-width:640px){.hero .btn-row.center-row{justify-content:flex-start;}}
+
+/* ---------- split / checklist ---------- */
+.split{display:grid;gap:clamp(2.4rem,5vw,4.5rem);align-items:start;}
+@media (min-width:900px){.split{grid-template-columns:1.02fr 1fr;gap:clamp(3rem,7vw,7rem);}}
+.split>*{min-width:0;}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:1.45rem;}
+.checks li{display:grid;grid-template-columns:1.35rem 1fr;gap:.85rem;align-items:start;}
+.checks li>span:last-child{min-width:0;color:var(--ink-soft);}
+.tick{color:var(--rust);font-size:.95rem;line-height:1.7;}
+.split__note{margin-top:2.6rem;font-family:var(--display);font-style:italic;font-size:clamp(1.05rem,2.2vw,1.3rem);line-height:1.45;color:var(--ink);}
+
+/* ---------- credential band ---------- */
+.creds{
+  position:relative;isolation:isolate;overflow:hidden;color:#fff;text-align:center;
+  padding-block:clamp(5.5rem,13vw,10rem);
+}
+.creds__bg{
+  position:absolute;inset:0;z-index:-2;
+  background:url("https://cdn.katalyst-crm.com/a/aea709b2-d4d4-6845-095d-5959e9a78013") center/cover no-repeat,
+             linear-gradient(185deg,#8F8F88 0%,#6B6D67 45%,#3F4240 100%);
+}
+.creds__veil{
+  position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(22,21,15,.58) 0%,rgba(22,21,15,.42) 50%,rgba(22,21,15,.62) 100%);
+}
+.creds p{
+  font-family:var(--display);font-size:clamp(1.3rem,3vw,2.05rem);line-height:1.5;
+  max-width:66ch;margin-inline:auto;color:#fff;text-shadow:0 1px 30px rgba(0,0,0,.28);
+}
+
+/* scroll-reveal — visible at rest, animates in when scrolled to */
+.reveal{opacity:1;transform:none;}
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease;}
+  .reveal.is-in{opacity:1;transform:none;}
+}
+
+/* typewriter titles — chars pre-laid (opacity 0) so layout never shifts */
+.tw-ch{opacity:0;}
+.tw-ch.on{opacity:1;}
+.tw-caret{
+  display:inline-block;width:.06em;height:.92em;vertical-align:-.08em;
+  margin-left:.04em;background:var(--rust);
+  animation:tw-blink .9s steps(1,end) infinite;
+}
+.tw-caret--done{animation:tw-blink .9s steps(1,end) 3;}
+@keyframes tw-blink{50%{opacity:0;}}
+
+/* ---------- stat band (cards on tonal field) ---------- */
+.statband{position:relative;isolation:isolate;padding-block:var(--band);color:var(--ink);overflow:hidden;
+  background:var(--oat);}
+.statband h2{color:var(--ink);}
+.statband .eyebrow.on-dark{color:var(--ink-mute);}
+.statband__head{max-width:60ch;margin-inline:auto;text-align:center;margin-bottom:clamp(2.6rem,6vw,4rem);}
+.statband__head .serif-lede{color:var(--ink);font-style:italic;}
+.cards{display:grid;gap:clamp(1px,.14vw,2px);grid-template-columns:1fr;background:var(--line);}
+@media (min-width:620px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(3,1fr);}}
+.card{
+  background:var(--cream);color:var(--ink);
+  padding:clamp(1.9rem,3.2vw,2.6rem) clamp(1.5rem,2.6vw,2.1rem);
+  text-align:left;min-width:0;
+  display:flex;flex-direction:column;gap:1.05rem;
+  min-height:clamp(230px,27vw,290px);
+  position:relative;
+}
+.card__eyebrow{
+  display:inline-flex;align-items:center;gap:.65rem;margin:0;
+  font-family:var(--sans);font-size:.74rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-mute);font-weight:400;
+}
+.card__dot{display:none;}
+.card__stat{font-family:var(--display);font-size:clamp(1.65rem,3.6vw,2.25rem);line-height:1.05;letter-spacing:.003em;color:var(--ink);}
+.card__note{font-size:.98rem;line-height:1.65;color:var(--ink-soft);margin:0;max-width:32ch;}
+.card__note--wide{max-width:44ch;}
+.card__hair{margin-top:auto;display:block;height:1px;width:46px;background:var(--rust);opacity:.9;}
+
+/* wide feature card */
+.card--feature{
+  grid-column:1/-1;
+  display:grid;grid-template-columns:1fr;
+  padding:0;gap:0;overflow:hidden;min-height:0;
+}
+.card--feature .card__body{
+  padding:clamp(2.1rem,3.6vw,3.2rem) clamp(1.6rem,3vw,2.6rem);
+  display:flex;flex-direction:column;gap:1.3rem;align-items:flex-start;justify-content:center;
+  min-height:clamp(260px,34vw,340px);
+}
+.card--feature .card__stat--xl{font-size:clamp(2.1rem,5.4vw,3.4rem);line-height:1;}
+.card--feature .card__media{
+  min-width:0;aspect-ratio:16/10;
+  background:url("https://cdn.katalyst-crm.com/a/1aebdb88-a224-a458-cfe1-35410feaed79") center 30%/cover no-repeat,
+             linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);
+}
+@media (min-width:1000px){
+  .card--feature{grid-template-columns:1fr 1.15fr;align-items:stretch;}
+  .card--feature .card__media{aspect-ratio:auto;height:100%;min-height:340px;}
+}
+.statband__foot{margin-top:clamp(2.4rem,5vw,3.4rem);text-align:center;color:var(--ink);}
+.statband__foot .serif-lede{font-style:italic;max-width:55ch;margin-inline:auto;}
+.disclaimer{font-size:.86rem;letter-spacing:.08em;color:var(--ink-mute);margin-top:1.5rem;}
+
+/* ---------- centred statement ---------- */
+.statement{text-align:center;}
+.rule{width:56px;height:1px;background:var(--line);margin:1.5rem auto 2.2rem;border:0;}
+.statement__body{font-family:var(--display);font-size:clamp(1.42rem,3.6vw,2.5rem);line-height:1.38;max-width:29ch;margin-inline:auto;}
+.statement__body--wide{max-width:39ch;}
+/* tightened vertical rhythm for a heading group */
+.statement--tight .eyebrow{margin-bottom:1rem;}
+.statement--tight .rule{margin:1rem auto 1.3rem;}
+.statement--tight .statement__body{margin-bottom:0;}
+
+/* every paragraph inside a centred section auto-centres its box,
+   so max-width paragraphs sit on the same vertical axis as the title above */
+.statement p,
+.statband__head p,
+.statband__foot p,
+.assess p,
+.assess div > p,
+.closing p,
+.closing div > p,
+.quote p,
+.offer__body p{margin-inline:auto;}
+
+/* ---------- origin split (image + white box) ---------- */
+.origin{display:grid;gap:0;align-items:stretch;}
+.origin__media{
+  min-width:0;aspect-ratio:4/3;
+  background:url("https://cdn.katalyst-crm.com/a/2e057443-0f25-d4b7-f109-f35ca5c59992") center/cover no-repeat,
+             linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);
+}
+.origin__card{
+  background:var(--cream);min-width:0;text-align:left;
+  padding:clamp(2.2rem,5vw,4rem) clamp(1.6rem,4vw,3.4rem);
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+}
+.origin__card .eyebrow{margin-inline:0;margin-bottom:1.2rem;}
+.origin__card .rule{margin:0 0 1.8rem;}
+.origin__body{
+  font-family:var(--display);font-size:clamp(1.35rem,2.8vw,2.1rem);line-height:1.4;
+  color:var(--ink);max-width:34ch;margin:0;
+}
+@media (min-width:900px){
+  .origin{grid-template-columns:1fr 1.05fr;}
+  .origin__media{aspect-ratio:auto;height:100%;min-height:460px;}
+}
+
+/* ---------- belief split (image + text) ---------- */
+.believe{display:grid;gap:clamp(2.2rem,5vw,3.2rem);align-items:center;}
+.believe>*{min-width:0;}
+.believe__media{
+  min-width:0;aspect-ratio:4/5;
+  background:url("https://cdn.katalyst-crm.com/a/65d42ff5-f746-1ec9-9947-9857ca537783") center/cover no-repeat,
+             linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);
+}
+.believe .statement{text-align:left;}
+.believe .statement .eyebrow{margin-inline:0;}
+.believe .statement .rule{margin-left:0;margin-right:0;}
+.believe .statement .statement__body{max-width:none;margin-inline:0;}
+.believe .prose{max-width:none;margin-inline:0;}
+@media (min-width:900px){
+  .believe{grid-template-columns:0.82fr 1.18fr;gap:clamp(3rem,6vw,5rem);}
+  .believe__media{aspect-ratio:auto;height:100%;min-height:540px;}
+}
+
+/* ---------- marquee strips ---------- */
+.marquees{margin-top:clamp(3rem,6vw,4.5rem);display:grid;gap:clamp(2.4rem,5vw,3.6rem);}
+.marquee__label{text-align:center;margin:0 0 1.5rem;padding-inline:var(--gutter);}
+.marquee__viewport{
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+}
+.marquee__track{display:flex;width:max-content;animation:marquee-left 56s linear infinite;}
+.marquee--rev .marquee__track{animation-name:marquee-right;animation-duration:44s;}
+.marquee__viewport:hover .marquee__track{animation-play-state:paused;}
+.marquee__group{display:flex;align-items:center;flex:0 0 auto;}
+.marquee__item{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(1.15rem,2.4vw,1.72rem);line-height:1.2;
+  letter-spacing:.015em;color:var(--ink-soft);white-space:nowrap;
+  padding-inline:clamp(1.1rem,2.4vw,2.1rem);
+  display:inline-flex;align-items:center;gap:clamp(1.1rem,2.4vw,2.1rem);
+}
+.marquee__item::after{
+  content:"";display:block;width:5px;height:5px;flex:0 0 auto;
+  background:var(--rust);opacity:.75;transform:rotate(45deg);
+}
+@keyframes marquee-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes marquee-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+@media (prefers-reduced-motion:reduce){
+  .marquee__viewport{-webkit-mask-image:none;mask-image:none;padding-inline:var(--gutter);}
+  .marquee__track{width:100%;flex-wrap:wrap;justify-content:center;}
+  .marquee__group{flex-wrap:wrap;justify-content:center;}
+  .marquee__group[aria-hidden="true"]{display:none;}
+  .marquee__item{padding-block:.3rem;}
+}
+
+/* ---------- two-column feature with disclosure ---------- */
+.twocol{display:grid;gap:clamp(2.2rem,5vw,3.2rem);align-items:start;}
+.twocol>*{min-width:0;}
+.twocol__head .eyebrow{margin-inline:0;}
+.twocol__head .rule{margin:1.3rem 0 1.8rem;}
+.twocol__title{
+  font-family:var(--display);font-size:clamp(1.75rem,4vw,2.8rem);line-height:1.14;
+  color:var(--ink);margin:0;max-width:18ch;text-wrap:balance;
+}
+.twocol__body{color:var(--ink-soft);}
+.twocol__body p{max-width:60ch;}
+@media (min-width:900px){
+  .twocol{grid-template-columns:0.9fr 1.1fr;gap:clamp(3rem,6vw,6rem);}
+  .twocol__head{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);}
+}
+
+.disclose{border-top:1px solid var(--line);margin:2rem 0;}
+.disclose[open]{padding-bottom:.4rem;}
+.disclose>summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
+  padding:1.3rem 0;
+  font-family:var(--sans);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink);
+}
+.disclose>summary::-webkit-details-marker{display:none;}
+.disclose__sign{
+  position:relative;flex:0 0 auto;width:20px;height:20px;
+}
+.disclose__sign::before,.disclose__sign::after{
+  content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  background:var(--rust);
+}
+.disclose__sign::before{width:14px;height:1.5px;}
+.disclose__sign::after{width:1.5px;height:14px;transition:transform .25s ease;}
+.disclose[open] .disclose__sign::after{transform:translate(-50%,-50%) scaleY(0);}
+.disclose__panel{padding-bottom:.6rem;}
+.behaviours{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;}
+
+/* ---------- prose column ---------- */
+.prose{max-width:66ch;margin-inline:auto;color:var(--ink-soft);}
+.prose p{max-width:none;}
+.prose .pull{font-family:var(--display);font-style:italic;color:var(--ink);font-size:clamp(1.18rem,2.6vw,1.6rem);line-height:1.45;margin-block:2rem;}
+.behaviours{list-style:none;margin:2rem 0;padding:0;display:grid;gap:.55rem;}
+.behaviours li{
+  font-family:var(--display);font-size:clamp(1.02rem,2.1vw,1.22rem);line-height:1.5;color:var(--ink);
+  padding:.7rem 0;border-bottom:1px solid rgba(22,21,15,.1);
+}
+.behaviours li:last-child{border-bottom:0;}
+
+/* ---------- offset card block (image-2 language) ---------- */
+.offset{display:grid;gap:0;align-items:stretch;}
+.offset__media{aspect-ratio:4/3;min-width:0;}
+.offset__card{
+  background:var(--blush);
+  padding:clamp(1.9rem,5vw,3.4rem);
+  min-width:0;
+}
+@media (min-width:900px){
+  .offset{grid-template-columns:1fr 1fr;align-items:center;}
+  .offset__media{aspect-ratio:4/5;height:100%;}
+  .offset__card{margin-left:-14%;position:relative;z-index:2;box-shadow:0 22px 60px rgba(22,21,15,.07);}
+  .offset--flip .offset__media{order:2;}
+  .offset--flip .offset__card{order:1;margin-left:0;margin-right:-14%;}
+}
+.offset__card h2{margin-bottom:1.35rem;}
+.offset__card p{color:var(--ink-soft);max-width:46ch;}
+.offset__head{display:grid;gap:1rem;margin-bottom:1.35rem;}
+.offset__head .eyebrow{margin:0;}
+.offset__head h2{margin-bottom:0;}
+@media (min-width:1080px){
+  .offset__head .eyebrow{white-space:nowrap;letter-spacing:.12em;}
+  .offset__head--inline{grid-template-columns:auto 1fr;align-items:baseline;gap:1.3rem;}
+}
+
+/* ---------- framework carousel ---------- */
+.carousel{margin-top:clamp(3rem,6vw,4.5rem);}
+.moves{
+  display:flex;gap:clamp(1rem,2.2vw,1.5rem);
+  overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  padding-bottom:1.1rem;
+  scrollbar-width:thin;scrollbar-color:var(--line) transparent;
+}
+.moves::-webkit-scrollbar{height:6px;}
+.moves::-webkit-scrollbar-track{background:transparent;}
+.moves::-webkit-scrollbar-thumb{background:var(--line);border-radius:999px;}
+.move{
+  flex:0 0 min(84%,360px);scroll-snap-align:start;min-width:0;
+  display:flex;flex-direction:column;
+  min-height:clamp(330px,52vw,430px);
+  padding:clamp(1.9rem,3.4vw,2.7rem);
+}
+.move__top{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.5rem;}
+.move__ico{flex:0 0 auto;width:30px;height:30px;display:inline-flex;}
+.move__ico svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.4;}
+.move__num{
+  font-family:var(--display);font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;
+  color:var(--rust);letter-spacing:.02em;margin:0;display:block;
+}
+.move__inner{width:100%;}
+.move__name{font-family:var(--display);font-size:clamp(1.55rem,3.4vw,2.1rem);line-height:1.15;margin:0 0 .7rem;color:inherit;min-height:2.3em;}
+.move__from{
+  display:block;font-family:var(--sans);font-size:.76rem;letter-spacing:.2em;
+  text-transform:uppercase;margin-bottom:1.1rem;line-height:1.5;opacity:.7;
+}
+.move__text{font-size:1rem;line-height:1.7;margin:0;color:inherit;opacity:.85;max-width:40ch;}
+/* distinct card fills */
+.move--f1{background:var(--cream);color:var(--ink);}
+.move--f2{background:var(--oat);color:var(--ink);}
+.move--f3{background:var(--ink);color:var(--paper);}
+.move--f4{background:var(--blush);color:var(--ink);}
+.move--f5{background:var(--rust);color:#fff;}
+.move--f3 .move__num{color:var(--oat);}
+.move--f5 .move__num{color:#fff;}
+.carousel__nav{display:flex;gap:.7rem;justify-content:flex-end;margin-top:1.4rem;}
+.carousel__btn{
+  width:50px;height:50px;border-radius:999px;border:1px solid var(--ink);
+  background:transparent;color:var(--ink);cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;line-height:1;
+  font-family:var(--display);font-size:1.4rem;
+  transition:background .25s ease,color .25s ease,opacity .25s ease;
+}
+.carousel__btn:hover{background:var(--ink);color:var(--paper);}
+.carousel__btn:disabled{opacity:.28;cursor:default;}
+.carousel__btn:disabled:hover{background:transparent;color:var(--ink);}
+
+/* ---------- offers ---------- */
+.offer{display:grid;gap:0;background:var(--cream);}
+.offer+.offer{margin-top:clamp(1.4rem,3vw,2.4rem);}
+.offer__media{aspect-ratio:4/3;min-width:0;}
+.offer__body{
+  padding:clamp(2.2rem,6vw,4.5rem) clamp(1.25rem,3.5vw,2.75rem);
+  min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+}
+.offer__inner{width:100%;max-width:44ch;margin-inline:auto;}
+@media (min-width:900px){
+  .offer{grid-template-columns:1fr 1fr;align-items:stretch;}
+  .offer__media{aspect-ratio:auto;height:100%;min-height:520px;}
+  .offer--flip .offer__media{order:2;}
+}
+.offer__num{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--ink-mute);display:block;margin-bottom:1rem;}
+.offer__body h3{margin-bottom:1.2rem;}
+.offer__tagline{font-family:var(--display);font-style:italic;font-size:clamp(1.02rem,2.1vw,1.22rem);line-height:1.5;color:var(--ink);margin-inline:auto;max-width:36ch;}
+.offer__desc{margin-top:1.6rem;color:var(--ink-soft);font-size:1.06rem;line-height:1.8;max-width:none;}
+.offer__list{
+  list-style:none;margin:1.9rem auto 0;padding:0;
+  display:grid;gap:1rem;
+  text-align:left;max-width:38ch;
+}
+.offer__list li{display:grid;grid-template-columns:1.1rem 1fr;gap:.8rem;align-items:start;font-size:1.02rem;line-height:1.65;color:var(--ink-soft);}
+.offer__list li>span{min-width:0;}
+.offer__best{
+  margin-top:1.9rem;padding-top:1.4rem;border-top:1px solid var(--line);
+  font-family:var(--display);font-style:italic;font-size:1.12rem;line-height:1.5;color:var(--ink);
+  max-width:38ch;margin-inline:auto;
+}
+.offer .btn-row{margin-top:2rem;justify-content:center;}
+@media (min-width:640px){.offer .btn-row{justify-content:center;}}
+
+/* ---------- testimonial ---------- */
+.quote{position:relative;isolation:isolate;overflow:hidden;color:#fff;}
+.quote__bg{position:absolute;inset:0;z-index:-2;
+  background:url("https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260929_083721_47c20539-f6f3-4500-9045-cf5ddd51c2a2.png") center/cover no-repeat,
+             linear-gradient(190deg,#D9D1C4 0%,#BFB6A6 55%,#A39A8A 100%);}
+.quote__veil{position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(22,21,15,.66) 0%,rgba(22,21,15,.5) 50%,rgba(22,21,15,.7) 100%);}
+.quote .eyebrow{color:rgba(255,255,255,.72);}
+.quote blockquote{margin:0;font-family:var(--display);font-size:clamp(1.25rem,2.8vw,1.8rem);line-height:1.5;max-width:52ch;margin-inline:auto;text-align:center;color:#fff;text-shadow:0 1px 30px rgba(0,0,0,.3);}
+.quote__cont{
+  display:block;margin-top:1.5rem;
+  font-family:var(--sans);font-weight:300;letter-spacing:.01em;
+  font-size:clamp(1rem,1.5vw,1.16rem);line-height:1.75;
+  color:rgba(255,255,255,.86);text-shadow:none;
+}
+.attrib{font-size:.84rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-top:1.8rem;text-align:center;}
+.outcomes{display:grid;gap:clamp(1.6rem,4vw,2.5rem);margin-top:clamp(3rem,6vw,4.5rem);padding-top:clamp(2.4rem,5vw,3.5rem);border-top:1px solid rgba(255,255,255,.22);}
+@media (min-width:760px){.outcomes{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);}}
+.outcomes>div{min-width:0;text-align:center;}
+.outcomes p{font-family:var(--display);font-size:clamp(1.05rem,2.2vw,1.3rem);line-height:1.5;margin-inline:auto;max-width:30ch;color:rgba(255,255,255,.95);}
+.quote .attrib{color:rgba(255,255,255,.66);}
+.quote .rule{background:rgba(255,255,255,.4);}
+
+/* ---------- beliefs ---------- */
+.fourf{
+  font-family:var(--display);font-size:clamp(1.5rem,5vw,2.6rem);line-height:1.25;
+  text-align:center;margin-top:clamp(2.6rem,5vw,3.8rem);letter-spacing:.01em;
+}
+
+/* ---------- background tags ---------- */
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2.2rem;padding:0;list-style:none;}
+.tags li{
+  border:1px solid var(--line);border-radius:999px;padding:.55rem 1.1rem;
+  font-size:.84rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+}
+
+/* ---------- about: 2-column prose + credentials ---------- */
+.about-two-col{display:grid;gap:clamp(2.2rem,4vw,3rem);align-items:start;}
+.about-two-col>*{min-width:0;}
+.about-two-col__prose{color:var(--ink-soft);max-width:66ch;}
+.about-two-col__prose p{max-width:none;}
+.about-two-col__side{color:var(--ink-soft);}
+.about-tags{margin-top:0;}
+@media (min-width:860px){
+  .about-two-col{grid-template-columns:1.45fr 1fr;gap:clamp(2.8rem,5vw,4.5rem);}
+  .about-two-col__side{position:sticky;top:1.5rem;padding-left:clamp(1rem,2vw,1.8rem);
+    border-left:1px solid var(--line);}
+}
+
+/* ---------- assessment ---------- */
+.assess{position:relative;isolation:isolate;background:var(--oat);text-align:center;overflow:hidden;}
+.assess__bg{position:absolute;inset:0;z-index:-2;}
+.assess__veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(227,220,207,.88),rgba(227,220,207,.78));}
+.assess .d2{max-width:none;margin-inline:auto;}
+.assess p{max-width:56ch;}
+.assess__meta{font-family:var(--display);font-style:italic;font-size:clamp(1.02rem,2.1vw,1.25rem);color:var(--ink);}
+
+/* ---------- closing ---------- */
+.closing{position:relative;isolation:isolate;color:#fff;text-align:center;padding-block:var(--band);overflow:hidden;}
+.closing__bg{position:absolute;inset:0;z-index:-2;}
+.closing__veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(24,26,24,.62),rgba(24,26,24,.48));}
+.closing h2{color:#fff;max-width:24ch;margin-inline:auto;}
+.closing p{color:rgba(255,255,255,.88);}
+.speaker{margin-top:clamp(2.8rem,6vw,4rem);padding-top:1.9rem;border-top:1px solid rgba(255,255,255,.22);font-size:1rem;color:rgba(255,255,255,.85);max-width:52ch;margin-inline:auto;}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:rgba(247,244,239,.78);padding-block:clamp(3.2rem,7vw,5rem);}
+.foot__f{font-family:var(--display);font-size:clamp(1.15rem,3.4vw,1.85rem);color:var(--paper);text-align:center;letter-spacing:.02em;}
+.foot__grid{display:grid;gap:2.4rem;margin-top:clamp(2.6rem,5vw,3.6rem);padding-top:clamp(2.4rem,5vw,3.2rem);border-top:1px solid rgba(247,244,239,.18);}
+@media (min-width:820px){.foot__grid{grid-template-columns:1.1fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);}}
+.foot__grid>div{min-width:0;}
+.foot__name{font-family:var(--display);font-size:1.25rem;color:var(--paper);margin-bottom:.9rem;}
+.foot__logo{height:clamp(44px,6vw,58px);width:auto;display:block;}
+.foot p{font-size:1rem;line-height:1.8;margin:0;}
+.foot a{text-decoration:none;}
+.foot a:hover{color:var(--paper);}
+.foot__nav{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;}
+.foot__nav a{font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;}
+.foot__social{margin-top:1.1rem;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;}
+
+/* ---------- reusable card fills (applied to feature cards) ---------- */
+.fill-cream{background:var(--cream);}
+.fill-oat{background:var(--oat);}
+.fill-blush{background:var(--blush);}
+.fill-ink{background:var(--ink);color:var(--paper);}
+.fill-rust{background:var(--rust);color:#fff;}
+.fill-ink .eyebrow,.fill-rust .eyebrow{color:rgba(255,255,255,.72);}
+.fill-ink h1,.fill-ink h2,.fill-ink h3,.fill-rust h1,.fill-rust h2,.fill-rust h3{color:#fff;}
+.fill-ink p,.fill-rust p{color:rgba(255,255,255,.86);}
+.fill-ink .origin__body,.fill-rust .origin__body{color:#fff;}
+.fill-ink .rule,.fill-rust .rule{background:rgba(255,255,255,.35);}
+.fill-ink .offer__num,.fill-rust .offer__num{color:rgba(255,255,255,.8);}
+.fill-ink .offer__tagline,.fill-rust .offer__tagline,
+.fill-ink .offer__best,.fill-rust .offer__best{color:#fff;}
+.fill-ink .offer__list li,.fill-rust .offer__list li{color:rgba(255,255,255,.88);}
+.fill-ink .tick,.fill-rust .tick{color:#fff;}
+.fill-ink .offer__best,.fill-rust .offer__best{border-top-color:rgba(255,255,255,.3);}
+</style>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="wordmark" href="#top"><img class="wordmark__img" src="https://cdn.katalyst-crm.com/a/7d0f4c67-9391-a875-0923-01dc7853472d" alt="Nazy Massoud"></a>
+    <div class="topbar__right">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteMenu">
+        <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i></span>
+        <span class="menu-btn__label">Menu</span>
+      </button>
+      <a class="nav-cta" href="#book">
+        <span class="nav-cta__short">Book a Call</span>
+        <span class="nav-cta__long">Book a Private Conversation</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav class="overlay" id="siteMenu" aria-label="Main">
+  <button class="overlay__close" id="menuClose">Close</button>
+  <div class="wrap">
+    <ul class="overlay__links">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#ways">Ways to Work Together</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#assessment">The Power Leaks Assessment</a></li>
+      <li><a href="#book">Contact</a></li>
+    </ul>
+    <div class="btn-row">
+      <a class="btn" href="#book">Book a Private Conversation</a>
+      <a class="btn btn--ghost" href="#assessment">Take the Power Leaks Assessment</a>
+    </div>
+    <p class="overlay__meta">Freedom · Fulfillment · Fun · Funds</p>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg field ph-hero" aria-hidden="true"></div>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">Trusted Advisor for Wealth &amp; Freedom</p>
+      <h1 class="d1">Make more.<br>Sacrifice less.</h1>
+      <p class="hero__sub">For high-performing women who are done choosing between a higher income and an actual life.</p>
+      <div class="btn-row center-row">
+        <a class="btn btn--solid-light" href="#book">Book a Private Conversation</a>
+        <a class="btn btn--light" href="#assessment">Take the Power Leaks Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT -->
+  <section class="sec">
+    <div class="wrap split">
+      <div>
+        <h2 class="d2 type-on">You already know how to succeed. That was never the problem.</h2>
+      </div>
+      <div>
+        <p style="color:var(--ink-soft);margin-bottom:1.9rem;">The problem is what success has quietly cost you.</p>
+        <ul class="checks">
+          <li><span class="tick" aria-hidden="true">✓</span><span>The rate you didn't raise.</span></li>
+          <li><span class="tick" aria-hidden="true">✓</span><span>The boundary you didn't set.</span></li>
+          <li><span class="tick" aria-hidden="true">✓</span><span>The room you walked out of before you said the thing you came to say.</span></li>
+        </ul>
+        <p class="split__note">Those are power leaks. And power leaks turn into money leaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL BAND -->
+  <section class="creds">
+    <div class="creds__bg" aria-hidden="true"></div>
+    <div class="creds__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="reveal">Fifteen years on Wall Street trading floors. More than 2,500 executives and entrepreneurs advised since. I help successful women find where their power is draining out, close the gaps, and turn that back into money, options, time, and freedom that belongs to them.</p>
+    </div>
+  </section>
+
+  <!-- WHAT CHANGES -->
+  <section class="statband">
+    <div class="wrap">
+      <div class="statband__head">
+        <p class="eyebrow on-dark">What Changes</p>
+        <p class="serif-lede type-on">The numbers women bring me, and the numbers they leave with.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <p class="card__eyebrow"><span class="card__dot"></span>Client · 01</p>
+          <div class="card__stat type-on">$90K → $1.5M</div>
+          <p class="card__note">In under two years. Jasmine · Las Vegas, NV.</p>
+          <span class="card__hair" aria-hidden="true"></span>
+        </article>
+        <article class="card">
+          <p class="card__eyebrow"><span class="card__dot"></span>Client · 02</p>
+          <div class="card__stat type-on">Quadrupled</div>
+          <p class="card__note">Her fees, and the respect that came with them. Erica · New York, NY.</p>
+          <span class="card__hair" aria-hidden="true"></span>
+        </article>
+        <article class="card">
+          <p class="card__eyebrow"><span class="card__dot"></span>Client · 03</p>
+          <div class="card__stat type-on">$250K → $550K</div>
+          <p class="card__note">In six months, in the same sales role.</p>
+          <span class="card__hair" aria-hidden="true"></span>
+        </article>
+
+        <article class="card card--feature">
+          <div class="card__body">
+            <p class="card__eyebrow"><span class="card__dot"></span>Across two decades</p>
+            <div class="card__stat card__stat--xl type-on">2,500+ advised</div>
+            <p class="card__note card__note--wide">Executives, managers, and entrepreneurs across fintech, finance, technology, healthcare, and professional services. The numbers are theirs; the pattern is the same.</p>
+            <span class="card__hair" aria-hidden="true"></span>
+          </div>
+          <div class="card__media ph-stats-feature" aria-hidden="true"></div>
+        </article>
+
+        <article class="card">
+          <p class="card__eyebrow"><span class="card__dot"></span>Client · 04</p>
+          <div class="card__stat type-on">+25% bonus</div>
+          <p class="card__note">In a year her firm was cutting bonuses across the board.</p>
+          <span class="card__hair" aria-hidden="true"></span>
+        </article>
+        <article class="card">
+          <p class="card__eyebrow"><span class="card__dot"></span>Client · 05</p>
+          <div class="card__stat type-on">$1B+ raised</div>
+          <p class="card__note">For a hedge fund, by a client.</p>
+          <span class="card__hair" aria-hidden="true"></span>
+        </article>
+        <article class="card">
+          <p class="card__eyebrow"><span class="card__dot"></span>Experience</p>
+          <div class="card__stat type-on">15 years</div>
+          <p class="card__note">On Wall Street trading floors — Morgan Stanley, JP Morgan, UBS, Chase, Bankers Trust.</p>
+          <span class="card__hair" aria-hidden="true"></span>
+        </article>
+      </div>
+      <div class="statband__foot">
+        <p class="serif-lede">None of them changed careers. They aligned who they were with the business and life they wanted to create.</p>
+        <p class="disclaimer">Names have been changed at clients' request. The results are theirs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE THIS COMES FROM -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="origin">
+        <div class="origin__media" aria-hidden="true"></div>
+        <div class="origin__card fill-oat">
+          <p class="eyebrow">Where This Comes From</p>
+          <hr class="rule">
+          <p class="origin__body">Fifteen years on the trading floors of Morgan Stanley, JP Morgan, UBS, Chase Manhattan, and Bankers Trust. Two decades since, advising entrepreneurs and leaders across fintech, finance, technology, healthcare, and professional services.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquees">
+      <div class="marquee">
+        <p class="eyebrow marquee__label">Organizations Impacted</p>
+        <div class="marquee__viewport">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <span class="marquee__item">Morgan Stanley</span>
+              <span class="marquee__item">JP Morgan</span>
+              <span class="marquee__item">Goldman Sachs</span>
+              <span class="marquee__item">UBS</span>
+              <span class="marquee__item">Citigroup</span>
+              <span class="marquee__item">Chase</span>
+              <span class="marquee__item">Bankers Trust</span>
+              <span class="marquee__item">Salomon Smith Barney</span>
+              <span class="marquee__item">Standard &amp; Poor's</span>
+              <span class="marquee__item">Mount Sinai</span>
+              <span class="marquee__item">RWJBarnabas Health</span>
+              <span class="marquee__item">Rutgers Business School</span>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <span class="marquee__item">Morgan Stanley</span>
+              <span class="marquee__item">JP Morgan</span>
+              <span class="marquee__item">Goldman Sachs</span>
+              <span class="marquee__item">UBS</span>
+              <span class="marquee__item">Citigroup</span>
+              <span class="marquee__item">Chase</span>
+              <span class="marquee__item">Bankers Trust</span>
+              <span class="marquee__item">Salomon Smith Barney</span>
+              <span class="marquee__item">Standard &amp; Poor's</span>
+              <span class="marquee__item">Mount Sinai</span>
+              <span class="marquee__item">RWJBarnabas Health</span>
+              <span class="marquee__item">Rutgers Business School</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee marquee--rev">
+        <p class="eyebrow marquee__label">Featured In</p>
+        <div class="marquee__viewport">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <span class="marquee__item">The Trader's Journal</span>
+              <span class="marquee__item">Business Day Live</span>
+              <span class="marquee__item">Financial Brains</span>
+              <span class="marquee__item">Trading Markets</span>
+              <span class="marquee__item">The Market Oracle</span>
+              <span class="marquee__item">ForexTV</span>
+              <span class="marquee__item">Hedge Co</span>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <span class="marquee__item">The Trader's Journal</span>
+              <span class="marquee__item">Business Day Live</span>
+              <span class="marquee__item">Financial Brains</span>
+              <span class="marquee__item">Trading Markets</span>
+              <span class="marquee__item">The Market Oracle</span>
+              <span class="marquee__item">ForexTV</span>
+              <span class="marquee__item">Hedge Co</span>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <span class="marquee__item">The Trader's Journal</span>
+              <span class="marquee__item">Business Day Live</span>
+              <span class="marquee__item">Financial Brains</span>
+              <span class="marquee__item">Trading Markets</span>
+              <span class="marquee__item">The Market Oracle</span>
+              <span class="marquee__item">ForexTV</span>
+              <span class="marquee__item">Hedge Co</span>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <span class="marquee__item">The Trader's Journal</span>
+              <span class="marquee__item">Business Day Live</span>
+              <span class="marquee__item">Financial Brains</span>
+              <span class="marquee__item">Trading Markets</span>
+              <span class="marquee__item">The Market Oracle</span>
+              <span class="marquee__item">ForexTV</span>
+              <span class="marquee__item">Hedge Co</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PART NOBODY WARNS YOU ABOUT -->
+  <section class="sec" style="background:var(--cream);">
+    <div class="wrap">
+      <div class="twocol">
+        <div class="twocol__head">
+          <p class="eyebrow">The Part Nobody Warns You About</p>
+          <hr class="rule">
+          <h2 class="twocol__title type-on">Success was supposed to make you freer. It made you more careful.</h2>
+        </div>
+        <div class="twocol__body">
+          <p>Here's the pattern in almost every woman who calls me. She's successful. She's respected. She's earning $200K, $500K, and more. And somewhere on the way up, the game quietly changed on her.</p>
+          <p class="pull">She stopped playing to win and started playing not to lose.</p>
+          <p>The comfort zone shrinks as the numbers grow. There's more to protect now, so she takes fewer chances.</p>
+
+          <details class="disclose" open>
+            <summary>
+              <span>The five quiet behaviours</span>
+              <span class="disclose__sign" aria-hidden="true"></span>
+            </summary>
+            <div class="disclose__panel">
+              <ul class="behaviours">
+                <li>She over-delivers and under-charges.</li>
+                <li>She keeps her end of agreements the other side already dropped.</li>
+                <li>She discounts because she bought a story about what her clients can afford.</li>
+                <li>She waits to be recognized instead of asking for the number.</li>
+                <li>In other words, she goes for gold stars instead of gold bars.</li>
+              </ul>
+            </div>
+          </details>
+
+          <p>None of it looks like a crisis. That's exactly why it runs for years.</p>
+          <p>Then one ordinary morning she sits down with her coffee and thinks, "Is this it?"</p>
+          <p class="pull">You are not stuck because you're missing a strategy. You're stuck because you've been leaking power in places you stopped noticing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS WORKS -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="offset">
+        <div class="offset__media field ph-why" aria-hidden="true"></div>
+        <div class="offset__card fill-ink">
+          <div class="offset__head">
+            <p class="eyebrow">Why This Works When Other Things Haven't</p>
+            <h2 class="d3 type-on">Most advisors work on the plan. I work on the person executing it.</h2>
+          </div>
+          <div style="margin-top:0;">
+            <p>You probably already know what to do. Most of my clients do. Knowing was never the bottleneck.</p>
+            <p>I came up through computer science, engineering, and robotics, then spent fifteen years on Wall Street across a range of roles, with risk management running through most of them. So I can sit inside your numbers, your positioning, and your next negotiation without flinching. I've also spent two decades learning how the body holds a decision long before the mind will admit it. I use both in the same conversation.</p>
+            <p>That combination is rare, and it's why the results come fast. We find the block. Then we build a strategy around who you actually are, instead of who you think you should be and what you should do.</p>
+            <p style="font-family:var(--display);font-style:italic;color:inherit;font-size:1.12rem;line-height:1.5;">My clients call me their performance shaman. I'll take it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK -->
+  <section class="sec" style="background:var(--cream);">
+    <div class="wrap">
+      <div class="statement statement--tight">
+        <p class="eyebrow eyebrow--wide">The Wealth &amp; Freedom Acceleration Framework</p>
+        <hr class="rule">
+        <p class="statement__body type-on">Five moves.</p>
+        <p style="margin-top:.8rem;color:var(--ink-soft);max-width:60ch;">This is the framework every client runs, shaped to their situation.</p>
+      </div>
+
+      <div class="carousel">
+        <div class="moves" id="movesTrack">
+          <article class="move move--f1">
+            <div class="move__top">
+              <span class="move__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="15.5,8.5 10.8,10.8 8.5,15.5 13.2,13.2" stroke-linejoin="round"/></svg></span>
+              <span class="move__num">01</span>
+            </div>
+            <div class="move__inner">
+              <h3 class="move__name">Clarity</h3>
+              <span class="move__from">From shoulds to what you actually want</span>
+              <p class="move__text">We strip out the goals you inherited. Most women are still running a plan someone else wrote for them. You can't build freedom on somebody else's blueprint.</p>
+            </div>
+          </article>
+
+          <article class="move move--f2">
+            <div class="move__top">
+              <span class="move__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 7.6-7 9-4-1.4-7-4.4-7-9V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="move__num">02</span>
+            </div>
+            <div class="move__inner">
+              <h3 class="move__name">Risk Assessment</h3>
+              <span class="move__from">From autopilot to awareness</span>
+              <p class="move__text">Wall Street taught me to find exposure before it costs you. We do the same with your programming: the beliefs quietly deciding what you're allowed to ask for. You don't know what you don't know. Until you do.</p>
+            </div>
+          </article>
+
+          <article class="move move--f3">
+            <div class="move__top">
+              <span class="move__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="8.5" r="4.5"/><path d="M11.7 11.7l7.3 7.3M16 15l2.2 2.2M18.2 12.8l2.2 2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="move__num">03</span>
+            </div>
+            <div class="move__inner">
+              <h3 class="move__name">Remove Roadblocks</h3>
+              <span class="move__from">From resistance to flow</span>
+              <p class="move__text">The block is almost never the market. It's the thing that tightens in your chest when you say your number out loud. We clear it at the level it actually lives.</p>
+            </div>
+          </article>
+
+          <article class="move move--f4">
+            <div class="move__top">
+              <span class="move__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+              <span class="move__num">04</span>
+            </div>
+            <div class="move__inner">
+              <h3 class="move__name">Aligned Strategies</h3>
+              <span class="move__from">From a shiny object to a game plan that fits</span>
+              <p class="move__text">Not the strategy that worked for someone with a different life, a different tolerance, and a different set of obligations. The one that works for you, and that you'll actually run.</p>
+            </div>
+          </article>
+
+          <article class="move move--f5">
+            <div class="move__top">
+              <span class="move__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6.5l5.5 5.5-5.5 5.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="move__num">05</span>
+            </div>
+            <div class="move__inner">
+              <h3 class="move__name">Aligned Action</h3>
+              <span class="move__from">From distraction to momentum</span>
+              <p class="move__text">Focus creates outcomes. Outcomes create money. Money creates options. Options are what freedom is actually made of.</p>
+            </div>
+          </article>
+        </div>
+        <div class="carousel__nav">
+          <button class="carousel__btn" id="movesPrev" type="button" aria-label="Previous moves" aria-controls="movesTrack">‹</button>
+          <button class="carousel__btn" id="movesNext" type="button" aria-label="Next moves" aria-controls="movesTrack">›</button>
+        </div>
+      </div>
+
+      <div class="btn-row center-row" style="justify-content:center;">
+        <a class="btn btn--ghost btn--square" href="#ways">See Where You'd Start</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYS TO WORK TOGETHER -->
+  <section class="sec" id="ways">
+    <div class="wrap">
+      <div class="statement statement--tight">
+        <p class="eyebrow">Ways to Work Together</p>
+        <hr class="rule">
+        <p class="statement__body type-on">One to one. Always.</p>
+        <p style="margin-top:.8rem;color:var(--ink-soft);max-width:58ch;">Nothing here is off the shelf. You get my full attention on your actual situation, and we build the answer together. What that looks like depends on what you're carrying and how fast you want it moved, and we'll shape it in the conversation.</p>
+      </div>
+
+      <div style="margin-top:clamp(3rem,6vw,4.5rem);">
+        <article class="offer">
+          <div class="offer__media field ph-vip" aria-hidden="true"></div>
+          <div class="offer__body fill-oat">
+            <div class="offer__inner">
+              <span class="offer__num">I.</span>
+              <h3 class="d3">The VIP Day</h3>
+              <p class="offer__tagline">One day. One decision you've been circling for months, finally made.</p>
+              <ul class="offer__list">
+                <li><span class="tick" aria-hidden="true">✓</span><span>Get crystal clear on what you really want, not what you should want or what others expect of you.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Identify what is really keeping you from making the decision, including the fears, programming, and blind spots you may not see.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Get clear on the real risks, trade-offs, and opportunities so you can stop going back and forth.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Trust yourself and your decision so you can stop second-guessing and move forward with confidence.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Leave with an aligned game plan and clear next steps to turn your decision into action and momentum.</span></li>
+              </ul>
+              <p class="offer__best">Best for: you want a decision made and a plan you trust, and you want it this month.</p>
+              <div class="btn-row">
+                <a class="btn btn--ghost btn--square" href="#book">Book a Private Conversation</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="offer offer--flip">
+          <div class="offer__media field ph-accel" aria-hidden="true"></div>
+          <div class="offer__body fill-rust">
+            <div class="offer__inner">
+              <span class="offer__num">II.</span>
+              <h3 class="d3">Wealth &amp; Freedom Acceleration</h3>
+              <p class="offer__tagline">Become the woman who charges more, decides faster, and stops apologizing for either.</p>
+              <p class="offer__desc">A high-touch, private 1:1 advisory experience for high-performing women ready to expand their wealth and freedom while creating a business and life that are truly aligned with who they are. It combines strategic insight with the deeper work of changing how you think, decide, receive, lead, and take action so success comes with more freedom, fulfillment, fun, and funds.</p>
+              <ul class="offer__list">
+                <li><span class="tick" aria-hidden="true">✓</span><span>Build success around who you truly are, increasing your self-worth, owning your uniqueness, expanding your impact and influence, and actually enjoying the life and wealth you are creating.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Remove the roadblocks and programming that keep you playing small, moving from resistance and holding back to flow, freedom, and expansion.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Strengthen your confidence and self-trust so you stop second-guessing yourself, make quicker aligned decisions, and take bigger chances.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Expand your wealth and receiving capacity so you can make more money with greater ease while creating more options, choices, and freedom.</span></li>
+                <li><span class="tick" aria-hidden="true">✓</span><span>Develop aligned strategies and take aligned action so you have a clear game plan, eliminate distractions, and create greater focus, momentum, and profitability.</span></li>
+              </ul>
+              <p class="offer__best">Best for: you're not fixing one thing. You're changing how you operate.</p>
+              <div class="btn-row">
+                <a class="btn btn--square" href="#book">Book a Private Conversation</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sec quote">
+    <div class="quote__bg" aria-hidden="true"></div>
+    <div class="quote__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="statement">
+        <p class="eyebrow">In Their Words</p>
+        <hr class="rule">
+      </div>
+      <blockquote>Before working with Nazy, I felt stuck, struggling to reconcile my desire for a fulfilling lifestyle with doubts about my business's financial capacity.<span class="quote__cont">Nazy's collaboration brought a transformative shift, enabling me to quadruple my fees, gain client respect, and achieve business success while enjoying my desired lifestyle. I'm grateful for Nazy's guidance in dismantling outdated beliefs and empowering me to scale my business while savoring life.</span></blockquote>
+      <p class="attrib">CEO, professional services · New York, NY</p>
+      <div class="outcomes">
+        <div>
+          <p>Jasmine went from 90K to 1.5 Million in less than 2 years.</p>
+          <p class="attrib">Client outcome · Las Vegas, NV</p>
+        </div>
+        <div>
+          <p>Erica found her clarity, her voice, and was able to take the right actions and quadrupled her fees.</p>
+          <p class="attrib">Client outcome · New York, NY</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I BELIEVE -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="believe">
+        <div class="believe__media" aria-hidden="true"></div>
+        <div class="believe__content">
+          <div class="statement">
+            <p class="eyebrow">What I Believe</p>
+            <hr class="rule">
+            <p class="statement__body type-on">What you tolerate, you teach.</p>
+          </div>
+          <div class="prose" style="margin-top:clamp(1.8rem,4vw,2.6rem);">
+            <p>Every rate you don't raise teaches someone what you're worth. Every agreement you honor after they've broken theirs teaches them the terms. Every time you shrink to keep the peace, you're training the room.</p>
+            <p class="pull">The reverse is also true, and it moves faster than you'd expect.</p>
+            <p>I'm not interested in you having more money for its own sake. I'm interested in what more money buys you: the ability to say no, to walk, to choose, to fund the thing you actually care about. More money is more options. More options is freedom.</p>
+            <p>Freedom. Fulfillment. Fun. Funds. You were taught to trade them against each other. You don't have to.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec" id="about" style="background:var(--cream);">
+    <div class="wrap">
+      <div class="offset offset--flip">
+        <div class="offset__media field ph-about" aria-hidden="true"></div>
+        <div class="offset__card fill-blush">
+          <div class="offset__head">
+            <p class="eyebrow">About Nazy</p>
+            <h2 class="d3 type-on">I learned this the expensive way.</h2>
+          </div>
+          <div style="margin-top:1.5rem;">
+            <p>In my early twenties I owned a home, drove a new Porsche, and was the youngest of my peers to make VP. Multiple six-figure net worth. Self-made by anyone's measure.</p>
+            <p>Then I got married, and I did what I'd been raised to do. I compromised. I accommodated. I took the back seat in my own life, one reasonable-sounding decision at a time. Caught between cultures and expectations, I gave away the one thing that had made me successful so young: my power.</p>
+            <p style="font-family:var(--display);font-style:italic;color:var(--ink);font-size:1.12rem;line-height:1.5;">The money followed it out the door.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-two-col" style="margin-top:clamp(2.8rem,6vw,4.2rem);">
+        <div class="about-two-col__prose">
+          <p>After the divorce I had nothing. Not just net worth. Self-worth. I was working full time on Wall Street and still had to borrow from my father to rent an apartment.</p>
+          <p>It was the best thing that ever happened to me, though it took a few years before I could say that out loud.</p>
+          <p>Once I could see the leaks, I could close them. Six years later my net worth was seven figures. I did it on Wall Street. I did it as a consultant. I did it in my second language, in rooms that weren't built for me. A mentor once congratulated me on how many glass ceilings I'd broken. I thanked him, and I had to go and look up what a glass ceiling was.</p>
+          <p>I was brought up in a culture with the expectation of becoming a housewife, but that was never my dream. I studied computing and engineering instead, then robotics. Since then I've walked on fire, jumped off a pole, skydived, scuba-dived, swum with dolphins, and moved to London, knowing nobody, among other things. I mention it because the pattern holds everywhere: the thing stopping you is almost never the thing in front of you.</p>
+        </div>
+        <aside class="about-two-col__side">
+          <p class="eyebrow" style="margin-bottom:1.1rem;">Background</p>
+          <ul class="tags about-tags">
+            <li>Master's studies in Robotics and Graphics</li>
+            <li>BS in Computing and Engineering</li>
+            <li>Lean Six Sigma Black Belt</li>
+            <li>Emotional Intelligence</li>
+            <li>ADKAR Change Management</li>
+            <li>Neuro-Linguistic Programming</li>
+            <li>Former Series 7 and Series 63</li>
+            <li>Hypnosis</li>
+            <li>Energy Recalibrations</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSESSMENT -->
+  <section class="sec assess" id="assessment">
+    <div class="assess__bg field ph-dunes" aria-hidden="true"></div>
+    <div class="assess__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Start Here</p>
+      <h2 class="d2 type-on">The Personal Power Leaks Assessment</h2>
+      <p class="assess__meta" style="margin-top:1.2rem;">Find out where it's going.</p>
+      <div style="margin-top:2rem;color:var(--ink-soft);">
+        <p>Most power leaks stay invisible until somebody points at them. This assessment walks you through the places high-performing women most often give theirs away and shows you what each one is quietly costing.</p>
+        <p>Ten minutes. No call required. You'll finish knowing more about your own pattern than you did this morning.</p>
+      </div>
+      <div class="btn-row center-row" style="justify-content:center;">
+        <a class="btn btn--square" href="#assessment">Take the Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing" id="book">
+    <div class="closing__bg field ph-close" aria-hidden="true"></div>
+    <div class="closing__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow on-dark">The Next Move</p>
+      <h2 class="d2 type-on">Success was only the beginning.</h2>
+      <div style="margin-top:1.8rem;max-width:58ch;margin-inline:auto;">
+        <p>You built something real. You're allowed to want more from it, and you're allowed to want it without paying for it with the rest of your life.</p>
+        <p>We'll spend the conversation on your situation: what you're building, what's stalled, and where I think the leak is. If we're a fit, I'll tell you. If we're not, I'll tell you that too and point you somewhere better.</p>
+      </div>
+      <div class="btn-row center-row" style="justify-content:center;">
+        <a class="btn btn--solid-light btn--square" href="#book">Book a Private Conversation</a>
+        <a class="btn btn--light btn--square" href="#assessment">Take the Power Leaks Assessment</a>
+      </div>
+      <p class="speaker" id="speaking">Booking a speaker? Nazy speaks on wealth, power, and what high-performing women are quietly trading away.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__f">Freedom · Fulfillment · Fun · Funds</p>
+    <div class="foot__grid">
+      <div>
+        <div class="foot__name"><img class="foot__logo" src="https://cdn.katalyst-crm.com/a/7d0f4c67-9391-a875-0923-01dc7853472d" alt="Nazy Massoud"></div>
+        <p>Founder, Mental Edge Strategies<br>Trusted Advisor for Wealth &amp; Freedom</p>
+      </div>
+      <div>
+        <p>
+          <a href="mailto:support@nazymassoud.com">support@nazymassoud.com</a><br>
+          <a href="tel:+12125852804">(212) 585-2804</a><br>
+          101 West End Ave, New York, NY 10023
+        </p>
+        <p class="foot__social"><a href="#top">LinkedIn</a> · <a href="#top">Facebook</a></p>
+      </div>
+      <div>
+        <ul class="foot__nav">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#ways">Ways to Work Together</a></li>
+          <li><a href="#speaking">Speaking</a></li>
+          <li><a href="#assessment">The Power Leaks Assessment</a></li>
+          <li><a href="#book">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var closeBtn=document.getElementById('menuClose');
+  var menu=document.getElementById('siteMenu');
+  var open=false;
+
+  function setOpen(state){
+    open=state;
+    menu.classList.toggle('open',state);
+    btn.classList.toggle('is-open',state);
+    btn.setAttribute('aria-expanded',String(state));
+    document.body.style.overflow=state?'hidden':'';
+  }
+
+  btn.addEventListener('click',function(e){e.stopPropagation();setOpen(!open);});
+  closeBtn.addEventListener('click',function(){setOpen(false);});
+
+  menu.addEventListener('click',function(e){
+    if(e.target.closest('a')) setOpen(false);
+    else if(e.target===menu) setOpen(false);
+  });
+
+  document.addEventListener('click',function(e){
+    if(open && !menu.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && open) setOpen(false);
+  });
+
+  window.addEventListener('resize',function(){
+    if(open && window.innerWidth>=1024) setOpen(false);
+  });
+})();
+
+/* scroll-reveal */
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!items.length) return;
+  if(!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('is-in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}
+    });
+  },{threshold:0.25,rootMargin:'0px 0px -8% 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+
+/* typewriter titles on scroll */
+(function(){
+  var titles=[].slice.call(document.querySelectorAll('.type-on'));
+  if(!titles.length) return;
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce || !('IntersectionObserver' in window)) return; /* leave full text as-is */
+
+  function setup(el){
+    var text=el.textContent;
+    el.setAttribute('aria-label',text);
+    el.textContent='';
+    var spans=[];
+    for(var i=0;i<text.length;i++){
+      var s=document.createElement('span');
+      s.className='tw-ch';s.setAttribute('aria-hidden','true');
+      s.textContent=text.charAt(i);
+      el.appendChild(s);spans.push(s);
+    }
+    var caret=document.createElement('span');
+    caret.className='tw-caret';caret.setAttribute('aria-hidden','true');
+    el.appendChild(caret);
+    el._tw={spans:spans,caret:caret,done:false};
+  }
+
+  function run(el){
+    var tw=el._tw; if(!tw||tw.done) return; tw.done=true;
+    var spans=tw.spans, caret=tw.caret;
+    var speed=Math.max(14,Math.min(42,Math.round(1000/Math.max(spans.length,1))));
+    var i=0;
+    (function step(){
+      if(i<spans.length){
+        spans[i].classList.add('on');
+        spans[i].insertAdjacentElement('afterend',caret);
+        var ch=spans[i].textContent;i++;
+        setTimeout(step, ch===' '?Math.round(speed*0.5):speed);
+      }else{
+        caret.classList.add('tw-caret--done');
+        setTimeout(function(){ if(caret&&caret.parentNode) caret.parentNode.removeChild(caret); },2700);
+      }
+    })();
+  }
+
+  titles.forEach(setup);
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ run(en.target); io.unobserve(en.target); }
+    });
+  },{threshold:0.5,rootMargin:'0px 0px -6% 0px'});
+  titles.forEach(function(el){io.observe(el);});
+})();
+
+/* framework carousel controls */
+(function(){
+  var track=document.getElementById('movesTrack');
+  var prev=document.getElementById('movesPrev');
+  var next=document.getElementById('movesNext');
+  if(!track||!prev||!next) return;
+
+  function step(){
+    var card=track.querySelector('.move');
+    if(!card) return track.clientWidth*0.8;
+    var gap=parseFloat(getComputedStyle(track).columnGap||getComputedStyle(track).gap||'16')||16;
+    return card.getBoundingClientRect().width+gap;
+  }
+  function update(){
+    var max=track.scrollWidth-track.clientWidth-1;
+    prev.disabled=track.scrollLeft<=1;
+    next.disabled=track.scrollLeft>=max;
+  }
+  prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
+  next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
+  track.addEventListener('scroll',function(){window.requestAnimationFrame(update);},{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
+
+
+</body></html>
